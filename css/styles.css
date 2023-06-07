@@ -45,13 +45,13 @@ img {
 .container {
   padding-left: 16px;
   padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 428px) {
   .container {
     width: 428px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -66,12 +66,6 @@ img {
     width: 1158px;
   }
 }
-
-/* .container {
-  width: 1158px;
-  margin: 0 auto;
-  padding: 0 15px;
-} */
 
 /* ====================COMPONENTS==================== */
 
@@ -201,6 +195,7 @@ body {
 }
 
 /* mobile-menu-address-list */
+
 .mobile-menu-address {
   margin-bottom: 48px;
 }
@@ -249,9 +244,7 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* =========================768======================= */
-@media screen and (max-width: 1157px) {
-}
+/* =====768===== */
 
 @media screen and (min-width: 768px) {
   .mobile-menu-open-button {
@@ -320,6 +313,13 @@ body {
     line-height: 1.16;
     letter-spacing: 0.04em;
     color: #434455;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .contact-link:hover,
+  .contact-link:focus {
+    color: #404bbf;
   }
 }
 
@@ -329,7 +329,7 @@ body {
   }
 }
 
-/* ========================1158px=========================== */
+/* ======1158px====== */
 
 @media screen and (min-width: 1158px) {
   .page-nav {
@@ -345,7 +345,190 @@ body {
   .nav-link {
     padding: 20px 0;
   }
+
+  .contact-link:hover,
+  .contact-link:focus {
+    color: #404bbf;
+  }
+
+  .contact-link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
+
+/* =========================HERO============================= */
+.page-header-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-section {
+  background-color: var(--theme-color);
+  padding-top: 188px;
+  padding-bottom: 188px;
+  display: flex;
+  align-items: center;
+  max-width: 1440px;
+  margin: auto;
+
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/background-images/hero-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/background-images/hero-mobile@2x.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main-title {
+    max-width: 320px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 72px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #ffffff;
+  }
+}
+
+.order-btn {
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 169px;
+  min-height: 56px;
+  padding: 16px 32px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  background-color: #4d5ae5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.order-btn:hover,
+.order-btn:focus {
+  background-color: #404bbf;
+}
+
+/* =====768px===== */
+
+@media screen and (min-width: 768px) {
+  .main-title {
+    max-width: 496px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 36px;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+  }
+}
+
+/* ======1158px====== */
+
+@media screen and (min-width: 1158px) {
+  .main-title {
+    margin-bottom: 48px;
+  }
+}
+
+/* ===================SECTION ADVANTAGES=============== */
+
+@media screen and (max-width: 1157px) {
+  .advantages-section {
+    padding: 96px 0;
+  }
+
+  .advantages-icon-box {
+    display: none;
+  }
+}
+
+/* =====428px==== */
+
+@media screen and (max-width: 767px) {
+  .title-list-item {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+  }
+
+  .advantages:not(:last-child) {
+    margin-bottom: 72px;
+  }
+}
+
+.text-description {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #434455;
+
+  align-self: stretch;
+}
+
+/* .advantages-list {
+  order: 1;
+  flex-grow: 0;
+} */
+/* =====768px==== */
+
+@media screen and (max-width: 1157px) {
+  .title-list-item {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+  }
+}
+
+.advantages {
+  max-width: 356px;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 72px;
+  column-gap: 24px;
+}
+
 /* .page-header {
   display: flex;
   align-items: center;
