@@ -767,6 +767,10 @@ body {
   .customers-section {
     padding: 96px 0;
   }
+
+  .customers-list {
+    flex-wrap: wrap;
+  }
 }
 
 .customers-list {
@@ -774,12 +778,6 @@ body {
   justify-content: center;
   column-gap: 16px;
   row-gap: 72px;
-}
-
-@media screen and (max-width: 1157px) {
-  .customers-list {
-    flex-wrap: wrap;
-  }
 }
 
 .customers-link {
